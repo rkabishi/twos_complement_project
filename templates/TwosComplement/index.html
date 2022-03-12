@@ -1,22 +1,9 @@
-<!DOCTYPE html>
+{% extends 'TwosComplement/base.html' %}
 {% load staticfiles %}
 
-<html>
 
-    <head>
-        <link rel = "stylesheet" href = "{% static 'css/style.css' %}" type="text/css">
-        <title>Index</title>
-    </head>
-
-    <body>
-        
-        <ul>
-            <li><a href=""><img id = "logo" src="{% static 'images/logo.png' %}"
-                alt="Twos Complement logo" /></a></li>
-            <li><a href="{% url 'TwosComplement:login' %}">Login</a></li>
-            <li><a href="{% url 'TwosComplement:register' %}">Register</a></li>
-            <li><a href="{% url 'TwosComplement:about_us' %}">About</a></li>
-        </ul>
+ 
+{% block content %}
 
         <h1>Welcome to the number 1 CS site</h1>
         
@@ -26,6 +13,6 @@
             <img src="{% static 'images/frontimage.jpg' %}"
                 alt="Front image" />
         </div>
-    </body>
+   
+{% endblock content %}
 
-</html> 

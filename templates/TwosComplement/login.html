@@ -1,13 +1,9 @@
-<!DOCTYPE html>
+{% extends 'TwosComplement/base.html' %}
 {% load staticfiles %}
 
-<html>
 
-    <head>
-        <title>Login</title>
-    </head>
-
-    <body>
+ 
+{% block content %}
         <h1>Login page</h1>
         <form id="login_form" method="POST" action="{% url 'TwosComplement:login' %}">
           {% csrf_token %}
@@ -17,10 +13,5 @@
           <br />
           <input type="submit" value="submit" />
         </form>
-        <div>
-            <a href="{% url 'TwosComplement:index' %}">Home</a><br />
-            <a href="{% url 'TwosComplement:about_us' %}">About us</a><br />
-            <a href="{% url 'TwosComplement:register' %}">Register</a><br />
-        </div>
-    </body>
+{% endblock content %}
 </html> 

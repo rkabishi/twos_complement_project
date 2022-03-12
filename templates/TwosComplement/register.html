@@ -1,14 +1,9 @@
-<!DOCTYPE html>
+{% extends 'TwosComplement/base.html' %}
 {% load staticfiles %}
 
-<html>
 
-    <head>
-        <title>Register</title>
-    </head>
-
-    <body>
-        <div>
+ 
+{% block content %}
             <h1>Register</h1>
             <form id="user_form" method="post" action="{% url 'TwosComplement:register' %}"
             enctype="multipart/form-data">
@@ -28,10 +23,17 @@
             <input type="submit" name="submit" value="Register" />
             </form>
             <br />
+{% endblock content %}
+
+
+
+  <!--
+            
             <a href="{% url 'TwosComplement:index' %}">Home</a><br />
             <a href="{% url 'TwosComplement:login' %}">Log in</a><br />
             <a href="{% url 'TwosComplement:about_us' %}">About us</a><br />
-            <a href="{% url 'TwosComplement:compatibility' %}">Questionnaire</a><br />
+            <a href="{% url 'TwosComplement:compatibility' %}">Questionnaire</a>
+            <br />
         </div>
     </body>
 </html>
